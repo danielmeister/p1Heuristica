@@ -1,0 +1,82 @@
+data;
+
+#Declaracion sets del enunciado
+set PUERTA := este oeste norte;
+set OBJETO := maquina torno persona;
+set ESTE := este;
+set OESTE := oeste;
+set NORTE := norte;
+set C4 := maquina torno;
+set C6 := torno;
+set ROBOTS := R1 R2 R3 R4 R5 R6 R7 R8;
+set SALAS := A B C D E F G H I J K L M N O P Q;
+set SALAS_ESTE := K L M N O P Q;
+set SALAS_OESTE := A B C D E F G H I J;
+#Sets auxiliares para las restricciones de la parte 2
+set rob_oeste := R2 R4;
+set rob_este := R3 R5 R6;
+set AB := A B;
+set CD := C D;
+
+#Declaracion de parametros del enunciado de la primera parte
+param reduccion: maquina torno persona :=
+		este		2	3	4
+		norte		2	3	4
+		oeste	  2	3	4;
+
+param costes: maquina torno persona :=
+		este 	4 5 8
+		norte 4 5 8
+		oeste	4 5 8;
+
+#Declaracion de parametros del enunciado de la segunda parte
+param obj_salas:=
+		A		5
+		B		5
+		C		5
+		D		6
+		E		6
+		F		4
+		G		4
+		H		4
+		I		7
+		J		7
+		K		3
+		L 	3
+		M		3
+		N		2
+		O		2
+		P		2
+		Q		2;
+
+param rob_pres:=
+		R1	4
+		R2	6
+		R3	5
+		R4	3
+		R5	2
+		R6	3
+		R7	4
+		R8	5;
+
+param rob_energia:=
+		R1	7
+		R2	5
+		R3	3
+		R4	1
+		R5	2
+		R6	4
+		R7	4
+		R8	5;
+
+param rob_lim:=
+		R1	100
+		R2	90
+		R3	95
+		R4	40
+		R5	45
+		R6	75
+		R7	85
+		R8	60;
+
+end;
